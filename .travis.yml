@@ -14,7 +14,7 @@ after_success:
   - docker build -t lavisht22/multi-server ./server
   - docker build -t lavisht22/multi-worker ./worker
   # Login to docker CLI
-  - echo "$DOCKER_PASSWORD" | docker login -u "$DOCKER_ID" --passsword-stdin
+  - echo "$DOCKER_PASSWORD" | docker login -u "$DOCKER_ID" --password-stdin
   # Push images to docker hub
   - docker push lavisht22/multi-client
   - docker push lavisht22/multi-nginx
